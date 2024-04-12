@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+
+ .layout {  /*this about the container*/
+    width: 100%; /*the container fill 100% of width space (ancho)*/
+  
+    display: grid; /*i'm working with grid layout*/
+    grid: /*it's define the grid structure*/
+      "span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12" 1fr
+      "span6 span6 span6 span6 span6 span6 . . . . . ." 1fr  /*(1fr significa una fracción del espacio disponible).*/
+      ". . . . . span3 span3 span3 . . . ." 1fr /*fijate que tenes que tener siempre 12 'espacios', y son 4 filas de 1fr*/
+      ". . . . span1 . . . . . . ." 1fr
+      / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  /*aca tenemos las 12 COLUMNAS cada una de 1fr*/  
+    gap: 8px;  /*Establece el espacio entre las celdas de la cuadrícula en 8 píxeles. */
+  }
+  
+  .span12 { grid-area: span12; } /*here i differenciate every span grid-area*/
+  .span6 { grid-area: span6; }   /*digamos que defino 4 tipos de areas(espacios) para cada span*/
+  .span3 { grid-area: span3; }
+  .span1 { grid-area: span1; }
+
+
+  /*adicionar background color a cada grid*/
+
+  div {
+    background-color: blue;
+    height: 165px;
+    text-align: center; /*me alinea horizontalmente al centro*/  
+  }
+
+  .span12 {
+    background-color: red;
+  }
+  .span6 {
+    background-color: rgb(0, 255, 17);
+  }
+  .span3 {
+    background-color: rgb(255, 0, 166);
+  }
+
+
+
+
